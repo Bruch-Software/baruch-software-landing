@@ -33,7 +33,8 @@ jobs:
 
       - name: Build
         run: npm run build
-        # Sin GITHUB_PAGES para que base sea '/' (dominio custom baruch-software.io)
+        env:
+          GITHUB_PAGES: "true"  # base /baruch-software-landing/ para la URL de GitHub
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
