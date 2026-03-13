@@ -32,7 +32,7 @@ jobs:
 
       - name: Build
         run: npm run build
-        # Sin GITHUB_PAGES para que base sea '/' (dominio custom bruch-software.io)
+        # Sin GITHUB_PAGES para que base sea '/' (dominio custom baruch-software.io)
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
