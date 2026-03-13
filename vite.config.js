@@ -4,7 +4,11 @@ import tailwindcss from '@tailwindcss/vite'
 import obfuscatorPlugin from 'vite-plugin-javascript-obfuscator'
 
 // https://vite.dev/config/
+// En GitHub Pages (proyecto) la app se sirve en /baruch-software-landing/
+const base = process.env.GITHUB_PAGES === 'true' ? '/baruch-software-landing/' : '/';
+
 export default defineConfig({
+  base,
   plugins: [
     react(),
     tailwindcss(),
@@ -46,5 +50,4 @@ export default defineConfig({
     sourcemap: false,
     minify: true,
   },
-  // Uncomment for GitHub Pages: base: '/vibe-stack-landing/',
 })

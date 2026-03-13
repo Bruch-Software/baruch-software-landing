@@ -32,6 +32,8 @@ jobs:
 
       - name: Build
         run: npm run build
+        env:
+          GITHUB_PAGES: "true"
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
@@ -42,6 +44,9 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     environment: github-pages
+    permissions:
+      pages: write
+      id-token: write
     steps:
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
