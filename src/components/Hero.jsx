@@ -7,12 +7,16 @@ function useTypingEffect(fullText, speed = 80, enabled = true) {
 
   useEffect(() => {
     if (!enabled || !fullText) {
-      setDisplay(fullText || '');
-      setDone(true);
+      queueMicrotask(() => {
+        setDisplay(fullText || '');
+        setDone(true);
+      });
       return;
     }
-    setDisplay('');
-    setDone(false);
+    queueMicrotask(() => {
+      setDisplay('');
+      setDone(false);
+    });
     let i = 0;
     const id = setInterval(() => {
       if (i < fullText.length) {

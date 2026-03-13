@@ -4,14 +4,15 @@ function useLoadTime() {
   const [loadTime, setLoadTime] = useState(null);
 
   useEffect(() => {
-    if (typeof performance !== 'undefined' && performance.timing) {
-      const timing = performance.timing;
-      const end = timing.loadEventEnd || timing.domContentLoadedEventEnd || Date.now();
-      const start = timing.navigationStart;
-      setLoadTime(Math.round(end - start));
-    } else {
-      setLoadTime(0);
-    }
+    const value =
+      typeof performance !== 'undefined' && performance.timing
+        ? Math.round(
+            (performance.timing.loadEventEnd ||
+              performance.timing.domContentLoadedEventEnd ||
+              Date.now()) - performance.timing.navigationStart
+          )
+        : 0;
+    queueMicrotask(() => setLoadTime(value));
   }, []);
 
   return loadTime;
