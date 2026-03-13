@@ -1,0 +1,177 @@
+@import "tailwindcss";
+
+:root {
+  /* High-Tech Terminal: negro puro, neón verde, profundidades */
+  --color-surface: #000000;
+  --color-surface-elevated: #0a0f0a;
+  --color-depth: #051005;
+  --color-border: rgba(0, 255, 65, 0.15);
+  --color-border-hover: rgba(0, 255, 65, 0.4);
+  --color-muted: #6b7b6b;
+  --color-text: #e8f5e9;
+  --color-text-muted: #a5d6a7;
+  --color-accent: #00ff41;
+  --color-accent-dim: rgba(0, 255, 65, 0.12);
+  --color-accent-glow: rgba(0, 255, 65, 0.35);
+  --color-glow-strong: rgba(0, 255, 65, 0.5);
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: var(--color-surface);
+  color: var(--color-text);
+  font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Scanline overlay (sutil) */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 0, 0, 0.03) 2px,
+    rgba(0, 0, 0, 0.03) 4px
+  );
+  animation: scanline 8s linear infinite;
+}
+
+@keyframes scanline {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(4px); }
+}
+
+#root {
+  min-height: 100vh;
+  position: relative;
+}
+
+.font-mono {
+  font-family: "JetBrains Mono", "SF Mono", ui-monospace, monospace;
+}
+
+.font-body {
+  font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+.font-logo {
+  font-family: "JetBrains Mono", "SF Mono", ui-monospace, monospace;
+  font-weight: 600;
+}
+
+/* Cards con borde que brilla en hover */
+.card-terminal {
+  background: var(--color-surface-elevated);
+  border: 1px solid var(--color-border);
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.card-terminal:hover {
+  border-color: var(--color-accent);
+  box-shadow:
+    0 0 20px var(--color-accent-dim),
+    0 0 40px var(--color-accent-dim),
+    inset 0 0 20px rgba(0, 255, 65, 0.03);
+  transform: translateY(-2px);
+}
+
+/* Entrada de sección al scroll */
+.section-reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.section-reveal.section-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger para hijos (ej. cards) */
+.section-reveal .reveal-stagger > * {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.section-reveal.section-visible .reveal-stagger > *:nth-child(1) { transition-delay: 0.1s; }
+.section-reveal.section-visible .reveal-stagger > *:nth-child(2) { transition-delay: 0.2s; }
+.section-reveal.section-visible .reveal-stagger > *:nth-child(3) { transition-delay: 0.3s; }
+
+.section-reveal.section-visible .reveal-stagger > * {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.btn-primary {
+  transition: opacity 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.btn-primary:hover {
+  opacity: 0.95;
+  box-shadow: 0 0 24px var(--color-accent-glow);
+  transform: translateY(-1px);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-secondary {
+  border: 1px solid var(--color-border);
+  background: transparent;
+  transition: border-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-secondary:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+  box-shadow: 0 0 16px var(--color-accent-dim);
+}
+
+.nav-link {
+  transition: color 0.2s ease;
+}
+
+/* Cursor parpadeante para typing */
+.typing-cursor::after {
+  content: "|";
+  color: var(--color-accent);
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body::after {
+    animation: none;
+  }
+  .section-reveal {
+    opacity: 1;
+    transform: none;
+  }
+  .section-reveal .reveal-stagger > * {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .card-terminal:hover {
+    transform: none;
+  }
+  .btn-primary:hover {
+    transform: none;
+  }
+  .typing-cursor::after {
+    animation: none;
+  }
+}

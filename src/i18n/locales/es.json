@@ -1,0 +1,65 @@
+{
+  "meta": {
+    "description": "Baruch Software | Soluciones cloud-agnostic, backend de alto rendimiento, arquitectura moderna e integración de IA. Excelencia en ingeniería. Sin fronteras."
+  },
+  "nav": {
+    "services": "Servicios",
+    "process": "Proceso",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "badge": "Excellence in Engineering. Powered by Intelligence.",
+    "title": "Excelencia en ingeniería. Sin fronteras.",
+    "subtitle": "Desde arquitecturas cloud complejas hasta sistemas impulsados por IA, construimos las bases de la tecnología del mañana.",
+    "cta_primary": "Iniciar conversación",
+    "cta_secondary": "Nuestros servicios"
+  },
+  "services": {
+    "title": "Qué construimos",
+    "subtitle": "Soluciones cloud-agnostic, stacks modernos e integración de inteligencia—sin atarte a un solo proveedor.",
+    "cloud": {
+      "title": "Ingeniería cloud escalable",
+      "description": "Soluciones en cualquier nube: AWS, Azure, GCP. Diseño de backend de alto rendimiento, optimización de costos e infraestructura que escala con vos."
+    },
+    "custom": {
+      "title": "Desarrollo de software a medida",
+      "description": "Sistemas hechos a medida con stacks modernos y eficientes. Desde APIs hasta productos completos—arquitectura limpia y mantenibilidad a largo plazo."
+    },
+    "ai": {
+      "title": "Sistemas AI-Native",
+      "description": "Integración de inteligencia en flujos existentes. Incorporamos IA donde aporta valor, manteniendo la seguridad y el gobierno bajo tu control."
+    }
+  },
+  "process": {
+    "title": "Cómo trabajamos",
+    "subtitle": "Estructurado, transparente y pensado para una asociación a largo plazo.",
+    "step1": {
+      "title": "Discovery y alineación",
+      "description": "Definimos alcance, métricas de éxito y arquitectura. Sin sorpresas—solo expectativas claras."
+    },
+    "step2": {
+      "title": "Construcción y entrega",
+      "description": "Entrega iterativa con prácticas modernas y gates de calidad. Visibilidad y control en cada paso."
+    },
+    "step3": {
+      "title": "Iterar y optimizar",
+      "description": "Mejora continua. Rendimiento, seguridad y escalabilidad siguen en el roadmap."
+    }
+  },
+  "closing": {
+    "title": "Hecho para equipos que esperan más",
+    "text": "Desde empresas hasta startups en crecimiento, aplicamos el mismo estándar: excelencia en ingeniería, potenciada por la inteligencia. Sin hype—solo resultados.",
+    "cta": "Hablemos de tu próximo proyecto."
+  },
+  "contact": {
+    "title": "Iniciar conversación",
+    "subtitle": "Contanos tus objetivos. Respondemos en 24 horas.",
+    "cta_primary": "Reservar llamada",
+    "cta_secondary": "Escalar tu equipo",
+    "email": "Contacto"
+  },
+  "footer": {
+    "tagline": "Baruch Software — Excelencia en ingeniería. Sin fronteras.",
+    "rights": "Todos los derechos reservados."
+  }
+}

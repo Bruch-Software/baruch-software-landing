@@ -1,0 +1,65 @@
+{
+  "meta": {
+    "description": "Baruch Software | Cloud-agnostic solutions, high-performance backend, modern stack architecture & AI-native systems. Engineering excellence. No boundaries."
+  },
+  "nav": {
+    "services": "Services",
+    "process": "Process",
+    "contact": "Contact"
+  },
+  "hero": {
+    "badge": "Excellence in Engineering. Powered by Intelligence.",
+    "title": "Engineering Excellence. No Boundaries.",
+    "subtitle": "From complex cloud architectures to AI-driven systems, we build the foundations of tomorrow's technology.",
+    "cta_primary": "Start a Conversation",
+    "cta_secondary": "Our Services"
+  },
+  "services": {
+    "title": "What We Build",
+    "subtitle": "Cloud-agnostic solutions, modern stacks, and intelligence integration—without vendor lock-in.",
+    "cloud": {
+      "title": "Scalable Cloud Engineering",
+      "description": "Solutions across any cloud: AWS, Azure, GCP. High-performance backend design, cost optimization, and infrastructure that scales with you."
+    },
+    "custom": {
+      "title": "Custom Software Development",
+      "description": "Tailored systems built with modern, efficient stacks. From APIs to full products—clean architecture and long-term maintainability."
+    },
+    "ai": {
+      "title": "AI-Native Systems",
+      "description": "Intelligence integration into existing workflows. We embed AI where it adds value while keeping security and governance in your control."
+    }
+  },
+  "process": {
+    "title": "How We Work",
+    "subtitle": "Structured, transparent, and built for long-term partnership.",
+    "step1": {
+      "title": "Discovery & Alignment",
+      "description": "We define scope, success metrics, and architecture. No surprises—only clear expectations."
+    },
+    "step2": {
+      "title": "Build & Ship",
+      "description": "Iterative delivery with modern practices and quality gates. Full visibility and control at every step."
+    },
+    "step3": {
+      "title": "Iterate & Optimize",
+      "description": "Continuous improvement. Performance, security, and scalability stay on the roadmap."
+    }
+  },
+  "closing": {
+    "title": "Built for Teams That Expect More",
+    "text": "From enterprises to scaling startups, we bring the same standard: engineering excellence, powered by intelligence. No hype—just results.",
+    "cta": "Let's talk about your next project."
+  },
+  "contact": {
+    "title": "Start a Conversation",
+    "subtitle": "Tell us about your goals. We respond within 24 hours.",
+    "cta_primary": "Book a Call",
+    "cta_secondary": "Scale Your Team",
+    "email": "Get in touch"
+  },
+  "footer": {
+    "tagline": "Baruch Software — Engineering Excellence. No Boundaries.",
+    "rights": "All rights reserved."
+  }
+}
